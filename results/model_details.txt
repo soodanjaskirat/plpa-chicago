@@ -1,0 +1,239 @@
+
+
+===== A1a Logit, no controls =====
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:      any_high_cost_pre   No. Observations:                  797
+Model:                          Logit   Df Residuals:                      793
+Method:                           MLE   Df Model:                            3
+Date:                Fri, 30 Oct 2026   Pseudo R-squ.:                0.003751
+Time:                        18:34:07   Log-Likelihood:                -196.75
+converged:                       True   LL-Null:                       -197.49
+Covariance Type:              cluster   LLR p-value:                    0.6865
+===============================================================================
+                  coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------
+Intercept      -3.4683      0.696     -4.983      0.000      -4.832      -2.104
+income_10k      0.0734      0.061      1.208      0.227      -0.046       0.192
+black_10pp      0.0684      0.061      1.114      0.265      -0.052       0.189
+latino_10pp     0.0568      0.072      0.787      0.431      -0.085       0.198
+===============================================================================
+
+
+===== A1b Logit + businesses =====
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:      any_high_cost_pre   No. Observations:                  797
+Model:                          Logit   Df Residuals:                      792
+Method:                           MLE   Df Model:                            4
+Date:                Fri, 30 Oct 2026   Pseudo R-squ.:                  0.1090
+Time:                        18:34:07   Log-Likelihood:                -175.97
+converged:                       True   LL-Null:                       -197.49
+Covariance Type:              cluster   LLR p-value:                 1.017e-08
+==================================================================================
+                     coef    std err          z      P>|z|      [0.025      0.975]
+----------------------------------------------------------------------------------
+Intercept         -8.2927      1.027     -8.072      0.000     -10.306      -6.279
+income_10k         0.0072      0.072      0.100      0.920      -0.133       0.147
+black_10pp         0.1671      0.065      2.571      0.010       0.040       0.294
+latino_10pp        0.0698      0.078      0.890      0.373      -0.084       0.223
+log_businesses     1.2137      0.180      6.752      0.000       0.861       1.566
+==================================================================================
+
+
+===== A2a Poisson count + businesses =====
+                 Generalized Linear Model Regression Results                  
+==============================================================================
+Dep. Variable:        n_high_cost_pre   No. Observations:                  797
+Model:                            GLM   Df Residuals:                      792
+Model Family:                 Poisson   Df Model:                            4
+Link Function:                    Log   Scale:                          1.0000
+Method:                          IRLS   Log-Likelihood:                -203.12
+Date:                Fri, 30 Oct 2026   Deviance:                       292.61
+Time:                        18:34:07   Pearson chi2:                     901.
+No. Iterations:                     6   Pseudo R-squ. (CS):             0.1045
+Covariance Type:              cluster                                         
+==================================================================================
+                     coef    std err          z      P>|z|      [0.025      0.975]
+----------------------------------------------------------------------------------
+Intercept         -7.7744      0.885     -8.781      0.000      -9.510      -6.039
+income_10k        -0.0520      0.073     -0.716      0.474      -0.194       0.090
+black_10pp         0.1117      0.073      1.536      0.125      -0.031       0.254
+latino_10pp        0.0248      0.075      0.330      0.742      -0.123       0.172
+log_businesses     1.2520      0.107     11.697      0.000       1.042       1.462
+==================================================================================
+
+
+===== A2b Neg. binomial count + businesses =====
+                     NegativeBinomial Regression Results                      
+==============================================================================
+Dep. Variable:        n_high_cost_pre   No. Observations:                  797
+Model:               NegativeBinomial   Df Residuals:                      792
+Method:                           MLE   Df Model:                            4
+Date:                Fri, 30 Oct 2026   Pseudo R-squ.:                  0.1207
+Time:                        18:34:07   Log-Likelihood:                -201.41
+converged:                       True   LL-Null:                       -229.06
+Covariance Type:              cluster   LLR p-value:                 2.789e-11
+==================================================================================
+                     coef    std err          z      P>|z|      [0.025      0.975]
+----------------------------------------------------------------------------------
+Intercept         -7.6973      0.905     -8.507      0.000      -9.471      -5.924
+income_10k        -0.0354      0.076     -0.464      0.643      -0.185       0.114
+black_10pp         0.1211      0.073      1.666      0.096      -0.021       0.264
+latino_10pp        0.0419      0.079      0.532      0.594      -0.112       0.196
+log_businesses     1.1925      0.125      9.527      0.000       0.947       1.438
+alpha              1.0512      0.952      1.104      0.270      -0.815       2.917
+==================================================================================
+
+
+===== A3a Logit, Loop excluded =====
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:      any_high_cost_pre   No. Observations:                  792
+Model:                          Logit   Df Residuals:                      787
+Method:                           MLE   Df Model:                            4
+Date:                Fri, 30 Oct 2026   Pseudo R-squ.:                 0.09246
+Time:                        18:34:07   Log-Likelihood:                -174.13
+converged:                       True   LL-Null:                       -191.87
+Covariance Type:              cluster   LLR p-value:                 3.702e-07
+==================================================================================
+                     coef    std err          z      P>|z|      [0.025      0.975]
+----------------------------------------------------------------------------------
+Intercept         -8.3490      1.144     -7.301      0.000     -10.590      -6.108
+income_10k         0.0259      0.071      0.363      0.716      -0.114       0.165
+black_10pp         0.1782      0.067      2.678      0.007       0.048       0.309
+latino_10pp        0.0824      0.079      1.043      0.297      -0.072       0.237
+log_businesses     1.1827      0.199      5.951      0.000       0.793       1.572
+==================================================================================
+
+
+===== A3b Poisson, stores within 1 mile =====
+                  Generalized Linear Model Regression Results                   
+================================================================================
+Dep. Variable:     high_cost_within_1mi   No. Observations:                  797
+Model:                              GLM   Df Residuals:                      792
+Model Family:                   Poisson   Df Model:                            4
+Link Function:                      Log   Scale:                          1.0000
+Method:                            IRLS   Log-Likelihood:                -1019.0
+Date:                  Fri, 30 Oct 2026   Deviance:                       1006.4
+Time:                          18:34:07   Pearson chi2:                 1.06e+03
+No. Iterations:                       5   Pseudo R-squ. (CS):             0.3252
+Covariance Type:                cluster                                         
+======================================================================================
+                         coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+Intercept             -7.1202      0.998     -7.138      0.000      -9.075      -5.165
+income_10k            -0.0045      0.027     -0.167      0.867      -0.057       0.048
+black_10pp             0.1024      0.042      2.426      0.015       0.020       0.185
+latino_10pp            0.0614      0.038      1.608      0.108      -0.013       0.136
+log_businesses_1mi     0.9994      0.125      7.996      0.000       0.754       1.244
+======================================================================================
+
+
+===== Variance inflation factors =====
+income_10k       2.400
+black_10pp       3.350
+latino_10pp      2.250
+log_businesses   1.260
+
+
+===== B1 DiD 2x2 =====
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                   exit   R-squared:                       0.361
+Model:                            OLS   Adj. R-squared:                  0.359
+Method:                 Least Squares   F-statistic:                     80.17
+Date:                Fri, 30 Oct 2026   Prob (F-statistic):           2.30e-32
+Time:                        18:34:07   Log-Likelihood:                 55.475
+No. Observations:                1364   AIC:                            -102.9
+Df Residuals:                    1360   BIC:                            -82.08
+Df Model:                           3                                         
+Covariance Type:              cluster                                         
+==================================================================================
+                     coef    std err          z      P>|z|      [0.025      0.975]
+----------------------------------------------------------------------------------
+Intercept          0.0386      0.009      4.348      0.000       0.021       0.056
+high_cost          0.0136      0.013      1.058      0.290      -0.012       0.039
+post               0.0193      0.017      1.103      0.270      -0.015       0.054
+high_cost:post     0.7023      0.051     13.854      0.000       0.603       0.802
+==============================================================================
+Omnibus:                      819.069   Durbin-Watson:                   2.083
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             9077.465
+Skew:                           2.632   Prob(JB):                         0.00
+Kurtosis:                      14.489   Cond. No.                         6.55
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)
+
+
+===== B2 DiD with year effects =====
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                   exit   R-squared:                       0.366
+Model:                            OLS   Adj. R-squared:                  0.360
+Method:                 Least Squares   F-statistic:                     28.91
+Date:                Fri, 30 Oct 2026   Prob (F-statistic):           1.98e-36
+Time:                        18:34:07   Log-Likelihood:                 60.806
+No. Observations:                1364   AIC:                            -93.61
+Df Residuals:                    1350   BIC:                            -20.56
+Df Model:                          13                                         
+Covariance Type:              cluster                                         
+===================================================================================
+                      coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Intercept           0.0177      0.013      1.391      0.164      -0.007       0.043
+C(year)[T.2015]  6.092e-05      0.018      0.003      0.997      -0.035       0.035
+C(year)[T.2016]     0.0454      0.024      1.885      0.059      -0.002       0.093
+C(year)[T.2017]     0.0428      0.024      1.754      0.079      -0.005       0.091
+C(year)[T.2018]     0.0039      0.019      0.202      0.840      -0.034       0.041
+C(year)[T.2019]     0.0410      0.025      1.649      0.099      -0.008       0.090
+C(year)[T.2020]     0.0145      0.021      0.679      0.497      -0.027       0.056
+C(year)[T.2021]     0.0520      0.042      1.227      0.220      -0.031       0.135
+C(year)[T.2022]     0.0795      0.034      2.362      0.018       0.014       0.145
+C(year)[T.2023]     0.0257      0.037      0.691      0.490      -0.047       0.099
+C(year)[T.2024]     0.0083      0.034      0.245      0.807      -0.058       0.075
+C(year)[T.2025]     0.0302      0.032      0.942      0.346      -0.033       0.093
+high_cost           0.0137      0.013      1.053      0.293      -0.012       0.039
+high_cost:post      0.6863      0.061     11.176      0.000       0.566       0.807
+==============================================================================
+Omnibus:                      810.260   Durbin-Watson:                   2.039
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             8798.554
+Skew:                           2.602   Prob(JB):                         0.00
+Kurtosis:                      14.302   Cond. No.                         13.2
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)
+
+
+===== B3 Pre-law trend check =====
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                   exit   R-squared:                       0.002
+Model:                            OLS   Adj. R-squared:                 -0.001
+Method:                 Least Squares   F-statistic:                     1.046
+Date:                Fri, 30 Oct 2026   Prob (F-statistic):              0.374
+Time:                        18:34:07   Log-Likelihood:                 147.90
+No. Observations:                1021   AIC:                            -287.8
+Df Residuals:                    1017   BIC:                            -268.1
+Df Model:                           3                                         
+Covariance Type:              cluster                                         
+==================================================================================
+                     coef    std err          z      P>|z|      [0.025      0.975]
+----------------------------------------------------------------------------------
+Intercept         -8.0378      7.330     -1.097      0.273     -22.404       6.329
+high_cost          2.5175     11.833      0.213      0.832     -20.675      25.710
+year               0.0040      0.004      1.101      0.271      -0.003       0.011
+high_cost:year    -0.0012      0.006     -0.212      0.832      -0.013       0.010
+==============================================================================
+Omnibus:                      899.536   Durbin-Watson:                   2.078
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            15037.374
+Skew:                           4.319   Prob(JB):                         0.00
+Kurtosis:                      19.699   Cond. No.                     5.60e+06
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)
+[2] The condition number is large, 5.6e+06. This might indicate that there are
+strong multicollinearity or other numerical problems.

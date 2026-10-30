@@ -1,0 +1,5 @@
+category,period,store_years,closures,closure_rate
+high_cost,after (2021-25),84,65,0.7738095238095238
+high_cost,before (2014-20),555,29,0.05225225225225225
+pawn,after (2021-25),259,15,0.05791505791505792
+pawn,before (2014-20),466,18,0.03862660944206009

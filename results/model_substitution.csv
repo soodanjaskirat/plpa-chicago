@@ -1,0 +1,2 @@
+model,estimate_pct_points,ci_low,ci_high,p_value,n
+C2 Pawn closure DiD (near vs far from payday),-1.7991526545743417,-8.792445065972178,5.194139756823494,0.6140950818467534,725

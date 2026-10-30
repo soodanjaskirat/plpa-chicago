@@ -1,0 +1,16 @@
+# Python 3.9+. Install with:  pip install -r requirements.txt
+pandas>=2.2,<2.3
+geopandas>=1.0,<1.1
+pyogrio>=0.7
+shapely>=2.0
+pyproj>=3.6
+statsmodels>=0.14
+matplotlib>=3.8
+requests>=2.31
+urllib3<2
+pypdf>=4.0
+
+# For running the walkthrough notebook
+nbformat>=5.9
+nbclient>=0.9
+ipykernel>=6.25
