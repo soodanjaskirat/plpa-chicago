@@ -77,7 +77,3 @@ The city license data changes daily, so `--refresh` may shift counts slightly. T
 ## Author
 
 Jaskirat Soodan
-
-## AI assistance
-
-This project was built with the help of Claude (Anthropic), an AI assistant, which wrote much of the code and drafted the documentation and write-up. I set the research question and directed the work. Every data source, classification and modeling choice is documented in this repository so it can be checked independently.
