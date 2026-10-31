@@ -139,7 +139,7 @@ def fig4_before_after(tracts_all, community_areas, stores):
     fig.suptitle("Storefront high-cost lenders nearly vanished after the 36% APR cap; pawnshops mostly remained",
                  x=0.02, ha="left", fontweight="bold", fontsize=10.5)
     fig.text(0.02, -0.01, "Locations licensed by the City of Chicago on each date. "
-             "Pawnshops were reportedly exempted from the cap by a 2021 court injunction.",
+             "Pawnshops were exempted from the cap (2021 court injunction; Public Act 103-0585, 2024).",
              fontsize=7, color=INK_2)
     fig.savefig(FIGURES / "fig4_map_before_after.png")
     plt.close(fig)

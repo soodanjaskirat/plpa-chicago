@@ -6,8 +6,8 @@
 Dep. Variable:      any_high_cost_pre   No. Observations:                  797
 Model:                          Logit   Df Residuals:                      793
 Method:                           MLE   Df Model:                            3
-Date:                Fri, 30 Oct 2026   Pseudo R-squ.:                0.003751
-Time:                        18:34:07   Log-Likelihood:                -196.75
+Date:                Sat, 31 Oct 2026   Pseudo R-squ.:                0.003751
+Time:                        09:36:34   Log-Likelihood:                -196.75
 converged:                       True   LL-Null:                       -197.49
 Covariance Type:              cluster   LLR p-value:                    0.6865
 ===============================================================================
@@ -26,8 +26,8 @@ latino_10pp     0.0568      0.072      0.787      0.431      -0.085       0.198
 Dep. Variable:      any_high_cost_pre   No. Observations:                  797
 Model:                          Logit   Df Residuals:                      792
 Method:                           MLE   Df Model:                            4
-Date:                Fri, 30 Oct 2026   Pseudo R-squ.:                  0.1090
-Time:                        18:34:07   Log-Likelihood:                -175.97
+Date:                Sat, 31 Oct 2026   Pseudo R-squ.:                  0.1090
+Time:                        09:36:34   Log-Likelihood:                -175.97
 converged:                       True   LL-Null:                       -197.49
 Covariance Type:              cluster   LLR p-value:                 1.017e-08
 ==================================================================================
@@ -49,8 +49,8 @@ Model:                            GLM   Df Residuals:                      792
 Model Family:                 Poisson   Df Model:                            4
 Link Function:                    Log   Scale:                          1.0000
 Method:                          IRLS   Log-Likelihood:                -203.12
-Date:                Fri, 30 Oct 2026   Deviance:                       292.61
-Time:                        18:34:07   Pearson chi2:                     901.
+Date:                Sat, 31 Oct 2026   Deviance:                       292.61
+Time:                        09:36:34   Pearson chi2:                     901.
 No. Iterations:                     6   Pseudo R-squ. (CS):             0.1045
 Covariance Type:              cluster                                         
 ==================================================================================
@@ -70,8 +70,8 @@ log_businesses     1.2520      0.107     11.697      0.000       1.042       1.4
 Dep. Variable:        n_high_cost_pre   No. Observations:                  797
 Model:               NegativeBinomial   Df Residuals:                      792
 Method:                           MLE   Df Model:                            4
-Date:                Fri, 30 Oct 2026   Pseudo R-squ.:                  0.1207
-Time:                        18:34:07   Log-Likelihood:                -201.41
+Date:                Sat, 31 Oct 2026   Pseudo R-squ.:                  0.1207
+Time:                        09:36:34   Log-Likelihood:                -201.41
 converged:                       True   LL-Null:                       -229.06
 Covariance Type:              cluster   LLR p-value:                 2.789e-11
 ==================================================================================
@@ -92,8 +92,8 @@ alpha              1.0512      0.952      1.104      0.270      -0.815       2.9
 Dep. Variable:      any_high_cost_pre   No. Observations:                  792
 Model:                          Logit   Df Residuals:                      787
 Method:                           MLE   Df Model:                            4
-Date:                Fri, 30 Oct 2026   Pseudo R-squ.:                 0.09246
-Time:                        18:34:07   Log-Likelihood:                -174.13
+Date:                Sat, 31 Oct 2026   Pseudo R-squ.:                 0.09246
+Time:                        09:36:34   Log-Likelihood:                -174.13
 converged:                       True   LL-Null:                       -191.87
 Covariance Type:              cluster   LLR p-value:                 3.702e-07
 ==================================================================================
@@ -115,8 +115,8 @@ Model:                              GLM   Df Residuals:                      792
 Model Family:                   Poisson   Df Model:                            4
 Link Function:                      Log   Scale:                          1.0000
 Method:                            IRLS   Log-Likelihood:                -1019.0
-Date:                  Fri, 30 Oct 2026   Deviance:                       1006.4
-Time:                          18:34:07   Pearson chi2:                 1.06e+03
+Date:                  Sat, 31 Oct 2026   Deviance:                       1006.4
+Time:                          09:36:34   Pearson chi2:                 1.06e+03
 No. Iterations:                       5   Pseudo R-squ. (CS):             0.3252
 Covariance Type:                cluster                                         
 ======================================================================================
@@ -143,8 +143,8 @@ log_businesses   1.260
 Dep. Variable:                   exit   R-squared:                       0.361
 Model:                            OLS   Adj. R-squared:                  0.359
 Method:                 Least Squares   F-statistic:                     80.17
-Date:                Fri, 30 Oct 2026   Prob (F-statistic):           2.30e-32
-Time:                        18:34:07   Log-Likelihood:                 55.475
+Date:                Sat, 31 Oct 2026   Prob (F-statistic):           2.30e-32
+Time:                        09:36:34   Log-Likelihood:                 55.475
 No. Observations:                1364   AIC:                            -102.9
 Df Residuals:                    1360   BIC:                            -82.08
 Df Model:                           3                                         
@@ -173,8 +173,8 @@ Notes:
 Dep. Variable:                   exit   R-squared:                       0.366
 Model:                            OLS   Adj. R-squared:                  0.360
 Method:                 Least Squares   F-statistic:                     28.91
-Date:                Fri, 30 Oct 2026   Prob (F-statistic):           1.98e-36
-Time:                        18:34:07   Log-Likelihood:                 60.806
+Date:                Sat, 31 Oct 2026   Prob (F-statistic):           1.98e-36
+Time:                        09:36:34   Log-Likelihood:                 60.806
 No. Observations:                1364   AIC:                            -93.61
 Df Residuals:                    1350   BIC:                            -20.56
 Df Model:                          13                                         
@@ -213,8 +213,8 @@ Notes:
 Dep. Variable:                   exit   R-squared:                       0.002
 Model:                            OLS   Adj. R-squared:                 -0.001
 Method:                 Least Squares   F-statistic:                     1.046
-Date:                Fri, 30 Oct 2026   Prob (F-statistic):              0.374
-Time:                        18:34:07   Log-Likelihood:                 147.90
+Date:                Sat, 31 Oct 2026   Prob (F-statistic):              0.374
+Time:                        09:36:34   Log-Likelihood:                 147.90
 No. Observations:                1021   AIC:                            -287.8
 Df Residuals:                    1017   BIC:                            -268.1
 Df Model:                           3                                         

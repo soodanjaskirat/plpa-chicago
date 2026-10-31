@@ -27,7 +27,7 @@ The full write-up is in [`paper/writeup.md`](paper/writeup.md).
 | [Chicago census tracts (2010)](https://data.cityofchicago.org/d/74p9-q2aq) and [community areas](https://data.cityofchicago.org/d/igwz-8jzy) | Maps and spatial joins |
 | `data/reference/lender_entities.csv` (hand-built) | Which license accounts are high-cost lenders, with evidence for each |
 
-**Why business licenses?** Illinois's regulator (IDFPR) has not published a downloadable list of lender branch addresses since 2011. Every Chicago storefront needs a city license, and the city's records include addresses, coordinates and license dates. A validation check found that 95% of the payday/title branches on the state's 2011 list (80 of 84) held a city license at the same address on the same date.
+**Why business licenses?** Illinois's regulator (IDFPR) has not published a downloadable list of lender branch addresses since 2011. Every Chicago storefront needs a city license, and the city's records include addresses, coordinates and license dates. A validation check found that 95% of the payday/title branches on the state's 2011 list (80 of 84) held a city license at the same address on the same date. Every high-cost lender in the hand-built list was also cross-checked against that 2011 state list (by name or branch address) or, for one later entrant, the company's own 2021 legislative testimony; see the `check_note` column.
 
 **Considered and dropped:** CFPB complaints (about one per Chicago ZIP code per year, too few) and BLS QCEW industry counts as an out-of-state comparison. QCEW industry codes mix payday lenders with other consumer lenders, and the 2022 industry-code revision breaks the series at the post-law year. Details are in [`data/README.md`](data/README.md) and the write-up.
 
@@ -45,7 +45,7 @@ The full write-up is in [`paper/writeup.md`](paper/writeup.md).
 - No out-of-state comparison group, so other 2021 shocks specific to payday lending (for example, COVID-era demand changes) can't be fully ruled out.
 - The results are about **storefronts**, not borrowers. Online lending and borrower outcomes are not measured.
 - Small numbers: about 67 stores across 797 tracts. ACS tract estimates have sizable margins of error (median about ±19% for income).
-- Pawnshops were exempted by a preliminary injunction around September 2021, so they were briefly subject to the cap.
+- Pawnshops were exempted by a preliminary injunction around September 2021, so they were briefly subject to the cap. A 2024 law (Public Act 103-0585) changed pawnbroker licensing and fees while keeping pawn loans outside the 36% cap.
 
 ## Repository layout
 
@@ -77,3 +77,7 @@ The city license data changes daily, so `--refresh` may shift counts slightly. T
 ## Author
 
 Jaskirat Soodan
+
+## AI assistance
+
+This project was built with the help of Claude (Anthropic), an AI assistant, which wrote much of the code and drafted the documentation and write-up. I set the research question and directed the work. Every data source, classification and modeling choice is documented in this repository so it can be checked independently.

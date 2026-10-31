@@ -24,7 +24,8 @@ MODEL SET B - Did high-cost stores close faster than pawnshops after the law? (s
   Difference-in-differences: (high-cost closure rate after - before) minus
   (pawnshop closure rate after - before). Pawnshops are the comparison group:
   similar fringe-finance storefronts, same neighborhoods, same COVID years,
-  but (according to news reports, to verify) exempt from the 36% cap.
+  but exempt from the 36% cap (a 2021 court injunction, then the 2024
+  Pawnbroker Regulation Act, Public Act 103-0585).
   We use a "linear probability model" (ordinary regression on a 0/1 outcome)
   so the result reads directly as percentage points.
 

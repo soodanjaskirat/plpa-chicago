@@ -29,7 +29,7 @@ saved in a file named `.census_key` in the project root. That file is git-ignore
 
 | File | What it is |
 |---|---|
-| `lender_entities.csv` | **The key judgment call in this project.** Each city license account we classified as a lender, its category, and the evidence. `verified_by_author = no` means the student author has not yet independently confirmed it (for example on NMLS Consumer Access, https://www.nmlsconsumeraccess.org). |
+| `lender_entities.csv` | **The key judgment call in this project.** Each city license account we classified as a lender, its category, and the evidence. `check_status` / `check_note` record a cross-check done on Oct 31, 2026: whether the company's name or Chicago branch addresses appear on IDFPR's archived 2011 licensee list, or another source confirms it. All 28 high-cost accounts are confirmed (26 by matching branch addresses). NMLS Consumer Access was not used, because it requires accepting its terms of use for each search. |
 | `candidate_accounts_for_review.csv` | Output of `src/review_candidates.py`: every possible lender account, with the category it was given (blank = judged not a lender). Lets anyone audit our choices. |
 
 Categories:
