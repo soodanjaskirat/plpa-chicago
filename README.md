@@ -8,7 +8,7 @@
 
 The full write-up is in [`paper/writeup.md`](paper/writeup.md).
 
-![High-cost lenders and pawnshops before and after the law](figures/fig3_map_before_after.png)
+![High-cost lenders and pawnshops before and after the law](figures/fig4_map_before_after.png)
 
 ## Key findings
 

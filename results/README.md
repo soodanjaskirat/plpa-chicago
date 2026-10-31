@@ -19,7 +19,7 @@ Descriptive (`tract_comparison.csv`, `exposure_by_*.csv`), 67 high-cost storefro
 
 Tracts with a store had about 2.8 times as many licensed businesses as other tracts (153 vs 54).
 
-Models (`model_location.csv`, Figure 6): 797 tracts. Standard errors are clustered by community area. Results are odds ratios or rate ratios; 1.00 means no relationship.
+Models (`model_location.csv`, Figure 3): 797 tracts. Standard errors are clustered by community area. Results are odds ratios or rate ratios; 1.00 means no relationship.
 
 | Model | Income (+$10k) | % Black (+10 pts) | % Latino (+10 pts) |
 |---|---|---|---|
@@ -64,9 +64,9 @@ Dropped in Phase 0. There are about 50–95 payday/personal-loan complaints a ye
 ## Files
 | File | Contents |
 |---|---|
-| `store_counts_by_year.csv` | Figure 4 data |
+| `store_counts_by_year.csv` | Figure 5 data |
 | `tract_comparison.csv`, `exposure_by_majority_group.csv`, `exposure_by_income_quintile.csv` | Sub-question 1 descriptives |
-| `model_location.csv` | Sub-question 1 models (Figure 6) |
+| `model_location.csv` | Sub-question 1 models (Figure 3) |
 | `closure_rates.csv`, `model_closure.csv`, `closures_by_brand.csv` | Sub-question 2 |
 | `pawn_openings.csv`, `pawn_closure_rates_by_proximity.csv`, `model_substitution.csv` | Sub-question 3 |
 | `model_details.txt` | Full statistical output for every model |

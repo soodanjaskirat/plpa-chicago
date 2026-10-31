@@ -3,10 +3,10 @@ Phase 2, part 4: publication figures (saved to figures/ as 300-dpi PNGs).
 
   fig1_map_income.png       Lender locations (2020) over tract median income
   fig2_map_race.png         Lender locations (2020) over % Black and % Latino
-  fig3_map_before_after.png High-cost lenders and pawnshops, Jan 2020 vs Jan 2024
-  fig4_trend_index.png      Store counts over time, indexed to 2020 = 100
-  fig5_closure_rates.png    Yearly closure rates: high-cost lenders vs pawnshops
-  fig6_model_estimates.png  Regression estimates with 95% confidence intervals
+  fig3_model_estimates.png  Regression estimates with 95% confidence intervals
+  fig4_map_before_after.png High-cost lenders and pawnshops, Jan 2020 vs Jan 2024
+  fig5_trend_index.png      Store counts over time, indexed to 2020 = 100
+  fig6_closure_rates.png    Yearly closure rates: high-cost lenders vs pawnshops
 
 Design choices (so they can be explained):
   * Each kind of store keeps ONE color everywhere: high-cost = orange circle,
@@ -120,7 +120,7 @@ def fig2_race(tracts_all, community_areas, high_cost_pre):
     plt.close(fig)
 
 
-def fig3_before_after(tracts_all, community_areas, stores):
+def fig4_before_after(tracts_all, community_areas, stores):
     fig, axes = plt.subplots(1, 2, figsize=(8.4, 5.6))
     fig.subplots_adjust(left=0, right=1, wspace=0.02, top=0.86, bottom=0.02)
     for ax, flag, title in [(axes[0], "active_pre", "January 2020 (before the law)"),
@@ -141,11 +141,11 @@ def fig3_before_after(tracts_all, community_areas, stores):
     fig.text(0.02, -0.01, "Locations licensed by the City of Chicago on each date. "
              "Pawnshops were reportedly exempted from the cap by a 2021 court injunction.",
              fontsize=7, color=INK_2)
-    fig.savefig(FIGURES / "fig3_map_before_after.png")
+    fig.savefig(FIGURES / "fig4_map_before_after.png")
     plt.close(fig)
 
 
-def fig4_trend():
+def fig5_trend():
     counts = pd.read_csv(RESULTS / "store_counts_by_year.csv").set_index("year")
     index = counts / counts.loc[2020] * 100
     fig, ax = plt.subplots(figsize=(6.8, 3.9))
@@ -170,11 +170,11 @@ def fig4_trend():
                  loc="left")
     fig.text(0.01, -0.03, "Source: City of Chicago business licenses (storefronts licensed on January 1 of each year).",
              fontsize=7, color=INK_2)
-    fig.savefig(FIGURES / "fig4_trend_index.png")
+    fig.savefig(FIGURES / "fig5_trend_index.png")
     plt.close(fig)
 
 
-def fig5_closure_rates():
+def fig6_closure_rates():
     panel = load_panel()
     rates = panel.groupby(["category", "year"]).agg(at_risk=("exit", "size"), rate=("exit", "mean")).reset_index()
     rates = rates[rates["at_risk"] >= 5]  # too few stores to compute a meaningful rate
@@ -196,11 +196,11 @@ def fig5_closure_rates():
                  loc="left", fontsize=9.5)
     fig.text(0.01, -0.03, "Each point covers Jan 1 of one year to Jan 1 of the next. Years with fewer than "
              "5 open stores are not shown (high-cost lenders after 2022).", fontsize=7, color=INK_2)
-    fig.savefig(FIGURES / "fig5_closure_rates.png")
+    fig.savefig(FIGURES / "fig6_closure_rates.png")
     plt.close(fig)
 
 
-def fig6_model_estimates():
+def fig3_model_estimates():
     models = pd.read_csv(RESULTS / "model_location.csv")
     terms = ["Median income (+$10k)", "% Black (+10 pts)", "% Latino (+10 pts)"]
     order = ["A1a Logit, no controls", "A1b Logit + businesses", "A2a Poisson count + businesses",
@@ -227,7 +227,7 @@ def fig6_model_estimates():
     fig.text(0.01, -0.06, "All models except the first control for the number of licensed businesses. "
              "Standard errors clustered by community area. N = 797 tracts (792 excluding downtown).",
              fontsize=7, color=INK_2)
-    fig.savefig(FIGURES / "fig6_model_estimates.png")
+    fig.savefig(FIGURES / "fig3_model_estimates.png")
     plt.close(fig)
 
 
@@ -240,10 +240,10 @@ def main():
 
     fig1_income(tracts_all, community_areas, high_cost_pre)
     fig2_race(tracts_all, community_areas, high_cost_pre)
-    fig3_before_after(tracts_all, community_areas, stores)
-    fig4_trend()
-    fig5_closure_rates()
-    fig6_model_estimates()
+    fig3_model_estimates()
+    fig4_before_after(tracts_all, community_areas, stores)
+    fig5_trend()
+    fig6_closure_rates()
     print("Saved figures:", ", ".join(sorted(p.name for p in FIGURES.glob("*.png"))))
 
 

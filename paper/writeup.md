@@ -46,29 +46,29 @@ On January 1, 2020, Chicago had 67 licensed high-cost storefronts in 54 tracts (
 ![Figure 2](../figures/fig2_map_race.png)
 *Figure 2. High-cost lenders in January 2020 over the share of Black and Latino residents.*
 
-The regressions support this picture (Figure 6). Commercial activity is the dominant predictor. A one-unit increase in log businesses, about 2.7 times as many businesses, roughly triples the odds of having a store (odds ratio 3.37, 95% CI 2.37–4.79). Median income is unrelated to lender presence in every specification (e.g. OR 1.01 per $10,000, CI 0.88–1.16). Holding commercial activity constant, each additional 10 points of Black population share is associated with about 18% higher odds of having a store (OR 1.18, CI 1.04–1.34). The association holds when downtown is excluded (OR 1.20, CI 1.05–1.36) and when access is measured as stores within one mile (rate ratio 1.11, CI 1.02–1.20). It is weaker, and not statistically significant, in the two store-count models (RR 1.12, CI 0.97–1.29; negative binomial RR 1.13, CI 0.98–1.30). Without the commercial control, the association disappears (OR 1.07, CI 0.95–1.21), because majority-Black neighborhoods have fewer businesses overall. Percent Latino shows no association in any specification. Predictor correlation is acceptable (variance inflation factors at most 3.4).
+The regressions support this picture (Figure 3). Commercial activity is the dominant predictor. A one-unit increase in log businesses, about 2.7 times as many businesses, roughly triples the odds of having a store (odds ratio 3.37, 95% CI 2.37–4.79). Median income is unrelated to lender presence in every specification (e.g. OR 1.01 per $10,000, CI 0.88–1.16). Holding commercial activity constant, each additional 10 points of Black population share is associated with about 18% higher odds of having a store (OR 1.18, CI 1.04–1.34). The association holds when downtown is excluded (OR 1.20, CI 1.05–1.36) and when access is measured as stores within one mile (rate ratio 1.11, CI 1.02–1.20). It is weaker, and not statistically significant, in the two store-count models (RR 1.12, CI 0.97–1.29; negative binomial RR 1.13, CI 0.98–1.30). Without the commercial control, the association disappears (OR 1.07, CI 0.95–1.21), because majority-Black neighborhoods have fewer businesses overall. Percent Latino shows no association in any specification. Predictor correlation is acceptable (variance inflation factors at most 3.4).
 
 These results describe where **stores** were, not where **borrowers** lived. An analysis of borrower ZIP codes found payday borrowing concentrated in Black and Latino communities (New America). The two findings are compatible, because borrowers travel to stores and many loans were made online.
 
-![Figure 6](../figures/fig6_model_estimates.png)
-*Figure 6. Estimated associations with lender presence across model specifications (95% confidence intervals).*
+![Figure 3](../figures/fig3_model_estimates.png)
+*Figure 3. Estimated associations with lender presence across model specifications (95% confidence intervals).*
 
 ### 4.2 Closures after the law
 
-High-cost storefronts had declined slowly before the law, from 88 in 2014 to 65 in 2021, roughly in line with storefront businesses citywide. After the law they collapsed: 16 remained in January 2022 and 1 in January 2023 (Figures 3 and 4). Pawnshops fell from 60 to 49 between 2020 and 2024, and all licensed storefront businesses fell 13%.
+High-cost storefronts had declined slowly before the law, from 88 in 2014 to 65 in 2021, roughly in line with storefront businesses citywide. After the law they collapsed: 16 remained in January 2022 and 1 in January 2023 (Figures 4 and 5). Pawnshops fell from 60 to 49 between 2020 and 2024, and all licensed storefront businesses fell 13%.
 
-![Figure 3](../figures/fig3_map_before_after.png)
-*Figure 3. High-cost lenders and pawnshops licensed in January 2020 and January 2024.*
+![Figure 4](../figures/fig4_map_before_after.png)
+*Figure 4. High-cost lenders and pawnshops licensed in January 2020 and January 2024.*
 
-![Figure 4](../figures/fig4_trend_index.png)
-*Figure 4. Store counts indexed to 2020 = 100.*
+![Figure 5](../figures/fig5_trend_index.png)
+*Figure 5. Store counts indexed to 2020 = 100.*
 
 Of the 65 stores licensed on the day the law took effect, 40 had their licenses cancelled before expiration, mostly within months. Check Into Cash, LendNation and Speedy Cash cancelled all their Chicago licenses within three months. Every chain's last license had ended within 17 months, except one store that held a license until 2025.
 
-Before the law, high-cost lenders closed at 5.2% per year and pawnshops at 3.9% (Figure 5). Afterwards, the rates were 77% and 5.8%. The difference-in-differences estimate is **+70 percentage points** (95% CI 60–80). With separate effects for each year, which absorb shocks such as COVID-19, it is +69 points (CI 57–81). Before 2021, the gap between the two groups' closure rates was not changing (−0.1 points per year, CI −1.3 to +1.0, p = 0.83), which supports the parallel-trends assumption.
+Before the law, high-cost lenders closed at 5.2% per year and pawnshops at 3.9% (Figure 6). Afterwards, the rates were 77% and 5.8%. The difference-in-differences estimate is **+70 percentage points** (95% CI 60–80). With separate effects for each year, which absorb shocks such as COVID-19, it is +69 points (CI 57–81). Before 2021, the gap between the two groups' closure rates was not changing (−0.1 points per year, CI −1.3 to +1.0, p = 0.83), which supports the parallel-trends assumption.
 
-![Figure 5](../figures/fig5_closure_rates.png)
-*Figure 5. Share of open stores that closed during each year.*
+![Figure 6](../figures/fig6_closure_rates.png)
+*Figure 6. Share of open stores that closed during each year.*
 
 ### 4.3 Did pawnshops fill the gap?
 
